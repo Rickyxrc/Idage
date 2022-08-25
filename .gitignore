@@ -1,0 +1,9 @@
+# code editor
+.idea/
+.vscode/
+
+# temp design files
+design/
+
+# node.js files
+node_modules/
