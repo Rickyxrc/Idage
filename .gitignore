@@ -7,3 +7,7 @@ design/
 
 # node.js files
 node_modules/
+.env
+
+# build
+dist/

@@ -8,9 +8,9 @@
 
 ## How can I use it? 我该如何使用？
 
-Please view our [usage document](https://github.com/Rickyxrc/Idage/usage).
+Please view our [usage document](https://github.com/Rickyxrc/Idage/tree/master/usage).
 
-请移步我们的 [使用指南](https://github.com/Rickyxrc/Idage/usage)。
+请移步我们的 [使用指南](https://github.com/Rickyxrc/Idage/tree/master/usage)。
 
 ## How can I start contributing? 我该如何贡献？
 
