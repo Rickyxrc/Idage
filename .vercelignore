@@ -1,0 +1,23 @@
+# code editor
+.idea/
+.vscode/
+
+# temp design files
+design/
+
+# node.js files
+node_modules/
+.env
+
+# build
+dist/
+
+usage/
+
+.gitignore
+
+index.js
+
+LICENCE
+
+readme.md
