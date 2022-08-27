@@ -1,5 +1,5 @@
 const axios = require("axios");
-module.exports = (type,url) => {
+module.exports = (type, url) => {
   return axios
     .get(url, {
       responseType: "arraybuffer",

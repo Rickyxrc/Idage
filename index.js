@@ -12,7 +12,8 @@ app.use(cors());
 
 console.log('loading router......');
 app.get('/github/user',require('./api/github/user'));
-app.get('/github/repo',require('./api/github/repo'));
+app.get('/github/repo', require('./api/github/repo'));
+app.get('/luogu/user',require('./api/luogu/user'));
 console.log('router loaded.')
 
 
