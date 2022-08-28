@@ -1,8 +1,0 @@
-{
-  "builds": [{ "src": "api/*.js", "use": "@vercel/node" }],
-  "routes": [
-    { "src": "/github/user", "dest": "/api/github/user/index.js" },
-    { "src": "/github/repo", "dest": "/api/github/repo/index.js" },
-    { "src": "/luogu/user", "dest": "/luogu/user" }
-  ]
-}
