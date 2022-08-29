@@ -1,13 +1,12 @@
 const axios = require("axios");
 const base64 = require("../../../common/imageUrlToBase64");
 const error = require("../../../common/error");
-const notfound = require("../../../common/notfound");
 const badrequest = require("../../../common/badrequest");
 const generateSvg = require("./_svg");
 
 module.exports = (req, res) => {
-  img_width = Number(req.query.width) | 480;
-  img_height = Number(req.query.height) | 144;
+  var img_width = Number(req.query.width) | 480;
+  var img_height = Number(req.query.height) | 144;
   if (req.query.username == undefined) return res.send(badrequest());
   res.setHeader("content-type", "image/svg+xml; charset=utf-8");
   res.setHeader("Cache-Control", "max-age=0, s-maxage=86400");
@@ -29,7 +28,7 @@ module.exports = (req, res) => {
         });
       });
     })
-    .catch((err) => {
+    .catch(() => {
       return res.send(error());
     });
 };
