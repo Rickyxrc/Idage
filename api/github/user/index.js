@@ -3,13 +3,14 @@ const base64 = require("../../../common/imageUrlToBase64");
 const error = require("../../../common/error");
 const badrequest = require("../../../common/badrequest");
 const generateSvg = require("./_svg");
+const notfound = require("../../../common/notfound");
 
 module.exports = (req, res) => {
-  var img_width = Number(req.query.width) | 480;
-  var img_height = Number(req.query.height) | 144;
+  var img_width = Number(req.query.width) || 480;
+  var img_height = Number(req.query.height) || 144;
   if (req.query.username == undefined) return res.send(badrequest());
   res.setHeader("content-type", "image/svg+xml; charset=utf-8");
-  res.setHeader("Cache-Control", "max-age=0, s-maxage=86400");
+  res.setHeader("Cache-Control", "max-age=43200, s-maxage=86400");
   axios
     .get(`https://api.github.com/users/${req.query.username}`, {
       headers: {
@@ -28,7 +29,9 @@ module.exports = (req, res) => {
         });
       });
     })
-    .catch(() => {
-      return res.send(error());
+    .catch((err) => {
+      if (err.code == "ERR_BAD_REQUEST")
+        return res.send(notfound(img_width, img_height));
+      else return res.send(error(img_width, img_height));
     });
 };

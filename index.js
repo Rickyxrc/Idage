@@ -16,5 +16,5 @@ app.get("/github/repo", require("./api/github/repo"));
 app.get("/luogu/user", require("./api/luogu/user"));
 console.log("router loaded.");
 
-console.log(`server listening on 0.0.0.0:${process.env.PORT | 80}.`);
-app.listen(("0.0.0.0:" + process.env.PORT) | "80");
+console.log("server listening on 0.0.0.0:" + (process.env.PORT || 80) + ".");
+app.listen(process.env.PORT || "80", "0.0.0.0");

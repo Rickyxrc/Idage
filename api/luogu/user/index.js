@@ -14,11 +14,11 @@ function getColor(col) {
 }
 
 module.exports = (req, res) => {
-  var img_width = Number(req.query.width) | 480;
-  var img_height = Number(req.query.height) | 144;
+  var img_width = Number(req.query.width) || 480;
+  var img_height = Number(req.query.height) || 144;
   if (req.query.uid == undefined) return res.send(badrequest());
   res.setHeader("content-type", "image/svg+xml; charset=utf-8");
-  res.setHeader("Cache-Control", "max-age=0, s-maxage=86400");
+  res.setHeader("Cache-Control", "max-age=43200, s-maxage=86400");
   axios
     .get(`https://www.luogu.com.cn/user/${req.query.uid}?_contentOnly`)
     .then((data) => {
