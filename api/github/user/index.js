@@ -31,6 +31,5 @@ module.exports = (req, res) => {
     })
     .catch((err) => {
       return res.send(error());
-      // return res.send("err");
     });
 };

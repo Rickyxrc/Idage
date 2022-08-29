@@ -1,6 +1,8 @@
 const axios = require("axios");
 const error = require("../../../common/error");
 const badrequest = require("../../../common/badrequest");
+const render = reqiure("./_svg");
+
 module.exports = (req, res) => {
   img_width = Number(req.query.width) | 480;
   img_height = Number(req.query.height) | 144;
@@ -12,7 +14,7 @@ module.exports = (req, res) => {
   else
     GETDATA() //rewrite this to get data and render.
       .then((data) => {
-        res.send(`<SVG CODE WITH TEMPLATE ${templateVar}>`); //the same as "<SVG CODE WITH TEMPLATE "+templateVar+">""
+        res.send(render(PARAM));
       })
       .catch((err) => {
         res.send(error());
