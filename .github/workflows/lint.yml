@@ -1,7 +1,6 @@
 name: Lint
 
 on:
-
   push:
     branches:
       - master
@@ -9,18 +8,28 @@ on:
     branches:
       - master
 
+env: # environment variables (available in any part of the action)
+  NODE_VERSION: 16
+
 permissions:
   checks: write
   contents: write
 
-jobs:
-  run-linters:
-    name: Run linters
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check out Git repository
+jobs: # list of things to do
+  linting:
+    name: Linting # job name (unique id)
+    runs-on: ubuntu-latest # on which machine to run
+    steps: # list of steps
+      - name: Install NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+ 
+      - name: Code Checkout
         uses: actions/checkout@v2
-
-      - name: Run ESLint
-        uses: stefanoeb/eslint-action@1.0.2
+ 
+      - name: Install Dependencies
+        run: npm ci
+ 
+      - name: Code Linting
+        run: npm run lint
