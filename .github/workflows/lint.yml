@@ -22,8 +22,5 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v2
 
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
+      - name: Run ESLint
+        uses: stefanoeb/eslint-action@1.0.2
