@@ -22,6 +22,10 @@ Or you can fork this repository, write the feature you want, and create a pull r
 
 或者你可以fork这个仓库，编写你想要的功能，并创建Pull Request。
 
+And please refer our [contribute docs](https://github.com/Rickyxrc/Idage/tree/master/usage/contribute.md).
+
+并且，请关注我们的[贡献指南](https://github.com/Rickyxrc/Idage/tree/master/usage/contribute.md)。
+
 ## About translation 关于翻译
 
 If there is something wrong with the translation, please raise it with us, or submit a pull request to us using the guidelines above.
