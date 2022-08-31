@@ -9,9 +9,10 @@ Preview:
 `![image](http://idage.rickyxrc.top/github/user?username=Rickyxrc)`
 
 variables:
-可变参数: 
+可变参数:
+
 - `username` : User's username in github.
-- `username` : 用户的Github用户名
+- `username` : 用户的 Github 用户名
 
 You can change param `username` to show your own personal information.
 

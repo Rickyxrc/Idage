@@ -16,11 +16,11 @@ Please refer [the user guide](https://github.com/Rickyxrc/Idage/tree/master/usag
 
 If you just want to make suggestions, pls create an issue.
 
-如果你只是想提提建议，请提交issue。
+如果你只是想提提建议，请提交 issue。
 
 Or you can fork this repository, write the feature you want, and create a pull request.
 
-或者你可以fork这个仓库，编写你想要的功能，并创建Pull Request。
+或者你可以 fork 这个仓库，编写你想要的功能，并创建 Pull Request。
 
 And please refer our [contribute docs](https://github.com/Rickyxrc/Idage/tree/master/usage/contribute.md).
 
@@ -30,4 +30,4 @@ And please refer our [contribute docs](https://github.com/Rickyxrc/Idage/tree/ma
 
 If there is something wrong with the translation, please raise it with us, or submit a pull request to us using the guidelines above.
 
-如果有什么地方翻译错误，请向我们提出来，或者参阅上方指南向我们提交Pull Request。
+如果有什么地方翻译错误，请向我们提出来，或者参阅上方指南向我们提交 Pull Request。

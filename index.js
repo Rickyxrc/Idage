@@ -11,6 +11,7 @@ if (process.env.GITHUBTOKEN == undefined) {
 app.use(cors());
 
 console.log("loading router......");
+app.get("/", require("./api/index/name"));
 app.get("/github/user", require("./api/github/user"));
 app.get("/github/repo", require("./api/github/repo"));
 app.get("/luogu/user", require("./api/luogu/user"));
