@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+process.env.GITHUBTOKEN="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"
+
 console.log("checking environment......");
 if (process.env.GITHUBTOKEN == undefined) {
   console.log('please set environment variable "GITHUBTOKEN".');
