@@ -18,8 +18,7 @@ module.exports = (req, res) => {
   var img_height = Number(req.query.height) || 144;
   if (req.query.uid == undefined) return res.send(badrequest());
   axios
-    .get(`https://www.luogu.com.cn/user/${req.query.uid}?_contentOnly`, {
-      "User-Agent": "Idage (Idage.rickyxrc.cc)",
+    .get(`https://api.ztrztr.top/api/luogu/page?url=user/${req.query.uid}`, {
     })
     .then((data) => {
       var fillColor = getColor(data.data.currentData.user.color);
